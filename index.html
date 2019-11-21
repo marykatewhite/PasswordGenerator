@@ -9,28 +9,29 @@
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <nav class="navbar navbar-light bg-light sticky-top justify-content-center">
-            <a class="navbar-brand" href="#"><h1>Password Generator</h1></a>
-        </nav>
+        <div class="titlebox">
+            <h1>Password Generator</h1>
+        </div>
 
         <div class="container">
 
+            
 
-            <div class="row justify-content-center">
+            <div class="row mx-auto">
                 <div class="col-lg-10 center">
-                    <input class="display" type="text" placeholder="Password will go here...">
+                    <div id="password"></div>
 
                 </div>
             </div>
 
-            <div class="row justify-content-center">
-                <div class="col-md-5">
+            <div class="row mx-auto">
+                <div class="col-md-5 mx-auto">
                     <button type="button" class="btn btn-primary btn-lg">Generate Password</button>
 
 
                 </div>
 
-                <div class="col-md-5">
+                <div class="col-md-5 mx-auto">
                     <button type="button" class="btn btn-secondary btn-lg">Copy to Clipboard</button>
 
 

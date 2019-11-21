@@ -1,0 +1,10 @@
+.titlebox {
+    height: 120px;
+    width: 100%;
+    background-color: gray;
+    color: white;
+    font-size: 60px;
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
