@@ -15,26 +15,49 @@
 
         <div class="container">
 
+            <div class="row mx-auto">
+                <div class="col-lg-12">
+                    <input type="range" min="8" max="128" id="slider">
+                </div>
+            </div>
+            <div class="row">
+                <div id="boxes" class="col-lg-12">
+                    <label><input id="uppercase" type="checkbox">Uppercase</label>
+                    <label><input id="lowercase" type="checkbox">Lowercase</label>
+                    <label><input id="numbers" type="checkbox">Numbers</label>
+                    <label><input id="special" type="checkbox">Special Characters</label>
+                </div>
+            </div>
+
             
 
             <div class="row mx-auto">
-                <div class="col-lg-10 center">
-                    <div id="password"></div>
+                <div class="col-lg-12 center">
+
+                    <div class="passwordBox">
+
+                        <div id="password"></div>
+
+                    </div>
 
                 </div>
             </div>
 
             <div class="row mx-auto">
-                <div class="col-md-5 mx-auto">
-                    <button type="button" class="btn btn-primary btn-lg">Generate Password</button>
+                <div class="col-md-4 mx-auto">
+                    <button type="button" onclick="" id="generateButton" class="btn btn-primary btn-lg">Generate Password</button>
 
 
                 </div>
 
-                <div class="col-md-5 mx-auto">
-                    <button type="button" class="btn btn-secondary btn-lg">Copy to Clipboard</button>
+                <div class="col-md-4 mx-auto">
+                    <button type="button" id="copyButton" class="btn btn-secondary btn-lg">Copy to Clipboard</button>
 
 
+                </div>
+
+                <div class="col-md-4">
+                    <div id="length"></div>
                 </div>
             </div>
 
