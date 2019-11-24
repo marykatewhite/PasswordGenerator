@@ -1,42 +1,39 @@
-
-var generateEl = document.getElementById('generateButton')
-generateEl.addEventListener('click', generate)
-
-
-// var copyEl = document.getElementById('copyButton')
-// getComputedStyle.addEventListener('click', )
-
-
-var uppercase = document.getElementById("uppercase")
-var lowercase = document.getElementById("lowercase")
-var numerals = document.getElementById("numbers")
-var special = document.getElementById("special")
-
-
-function buildArray() {
-    var characters = "";
-    var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWZYZ";
-    var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-    var numerals = "1234567890";
-    var special = "!@#$%^&*()_+";
-    if (uppercase.checked===true) {
-        characters += upperCase
-    }
-    if (lowercase.checked===true) {
-        characters += lowerCase
-    }
-    if (numerals.checked===true) {
-        characters += numerals
-    }
-    if (special.checked===true) {
-        characters += special
-    }
-    return characters;
-}
-
+var copyEl = document.getElementById('copyButton')
 
 function generate() {
-    var passwordLength = document.getElementById("slider").value
+    var uppercase = document.getElementById("uppercase")
+    var lowercase = document.getElementById("lowercase")
+    var numbers = document.getElementById("numbers")
+    var special = document.getElementById("special")
+    var characters = "";
+
+
+    function buildArray() {
+        var upperCaseChars = "ABCDEFGHIJKLMNOPQRSTUVWZYZ";
+        var lowerCaseChars = "abcdefghijklmnopqrstuvwxyz";
+        var numeralChars = "1234567890";
+        var specialChars = "!@#$%^&*()_+";
+        if (uppercase.checked===true) {
+            characters += upperCaseChars
+        }
+        if (lowercase.checked===true) {
+            characters += lowerCaseChars
+        }
+        if (numbers.checked===true) {
+            characters += numeralChars
+        }
+        if (special.checked===true) {
+            characters += specialChars
+        }
+        return characters;
+
+    }
+
+
+    var passwordLength = document.getElementById("slider").value;
+
+    var passwordBar = document.getElementById('password');
+    passwordBar.textContent = "";
 
     var password = '';
     var characters = buildArray();
@@ -47,16 +44,19 @@ function generate() {
         password = password + characters[charAt]
 
     }
-    var passwordBar = document.getElementById('password');
-    passwordBar.textContent += password
+    var passwordBar = document.getElementById('password');
+    passwordBar.textContent += password;
+
 }
+
+
 
 var generateEl = document.getElementById('generateButton')
 generateEl.addEventListener('click', generate)
 
 
 
-document.getElementById("length").innerHTML = "Length: 25"
+document.getElementById("length").innerHTML = "Length: 68"
 
 document.getElementById("slider").oninput = function() {
     if (document.getElementById("slider").value > 0) {

@@ -9,7 +9,7 @@
     margin-bottom: 30px;
 }
 
-.passwordBox {
+#password {
     width: 100%;
     line-height: 30px;
     padding: 20px;
